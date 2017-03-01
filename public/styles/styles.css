@@ -26,7 +26,7 @@ body {
   overflow: hidden;
 }
 .rippleEffect {
-    animation: rippleDrop .6s linear;
+    animation: rippleDrop 1s linear;
 }
 
 @keyframes rippleDrop {
