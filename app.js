@@ -11,6 +11,18 @@ const io = require('socket.io')(http);
 app.use(express.static('public'));
 app.use(morgan('dev'));
 
+var count = 0;
+
+io.on('connection', function(socket) {
+  count++;
+  io.sockets.emit('joined', count)
+  socket.on('clientToServer', function(data) {
+    socket.broadcast.emit('toEveryone', data)
+  })
+})
+
+
+
 app.get('/',function(req,res){
   res.sendFile(__dirname + '/index.html')
 })
