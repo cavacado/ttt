@@ -12,10 +12,10 @@
   "dependencies": {
     "express": "^4.14.1",
     "paper-ripple": "^0.2.0",
-    "socket.io": "^1.7.3"
+    "socket.io": "^1.7.3",
+    "morgan": "^1.8.1"
   },
   "devDependencies": {
-    "colors": "^1.1.2",
-    "morgan": "^1.8.1"
+    "colors": "^1.1.2"
   }
 }
